@@ -2,9 +2,11 @@
 
 [Vercel Deployment](https://my-funds-web.vercel.app/)
 
+![image](https://github.com/alefnsc/my-funds-web/assets/101351170/73accf64-09c0-41d1-a564-c438743bfa8b)
+
 ## Overview
 
-The My Funds Web project is a frontend application that allows users to calculate and visualize investment yield on a most more comprehensive way. The project uses a predfined array of data on a Javascript file.
+The My Funds Web project is a frontend application that allows users to calculate and visualize investment yield on a most more comprehensive way. The project uses a predefined array of data on a Javascript file.
 
 ## Components
 
