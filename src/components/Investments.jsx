@@ -1,7 +1,7 @@
-import getNumberColor from "../helpers/numberStyle";
 import calculateYield from "../helpers/calculateYield";
 import Investment from "./Investment";
 import { currencyFormat, percentFormat } from "../helpers/numberFormats";
+import useTextColor from "../hooks/useTextColor";
 
 export default function Investments({ children: reports = [], title }) {
   const finalInvestmentValue = reports[reports.length - 1].value;
@@ -9,14 +9,14 @@ export default function Investments({ children: reports = [], title }) {
 
   let totalYield = calculateYield(finalInvestmentValue, firstInvestmentValue);
 
-  let textColor = getNumberColor(totalYield);
+  let classname = useTextColor(totalYield);
 
   return (
     <div className="border container mx-auto p-4 m-10">
       <h1 className="text-center text-xl font-semibold">{title}</h1>
       <h1 className="text-center text-l font-medium">
         Rendimento total:
-        <span className={`text-${textColor}-600`}>
+        <span className={classname}>
           {` ${currencyFormat(
             finalInvestmentValue - firstInvestmentValue
           )} (${percentFormat(totalYield)}%)`}
